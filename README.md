@@ -50,4 +50,5 @@ bash:
 - npx playwright test --project=webkit
   
 Generate test report
-bash: npx playwright show-report
+bash:
+- npx playwright show-report
