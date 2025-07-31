@@ -27,3 +27,27 @@ or
 
 bash
 - npx playwright install
+
+# Running Tests
+Run all tests
+bash:
+- npx playwright test --reporter=list
+- yarn playwright test --reporter=list
+
+
+Run tests in headed mode
+bash: 
+- npx playwright test --headed
+
+Run specific test file
+bash:
+- npx playwright test tests/example.spec.ts
+
+Run tests for specific browser
+bash: 
+- npx playwright test --project=chromium 
+- npx playwright test --project=firefox
+- npx playwright test --project=webkit
+  
+Generate test report
+bash: npx playwright show-report
