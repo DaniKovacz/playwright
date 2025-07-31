@@ -11,9 +11,8 @@ Before you begin, ensure you have the following installed:
 # Installation
 Clone the repository:
 
-bash
-git clone [repository-url]
-cd [repository-name]
+bash:
+- git clone https://github.com/DaniKovacz/playwright.git
 
 Install dependencies:
 
