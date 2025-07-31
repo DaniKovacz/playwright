@@ -1,14 +1,14 @@
 QA Automation Repository with Playwright
-This repository contains automated tests for [https://magento.softwaretestingboard.com/] using Playwright, a modern end-to-end testing framework.
+This repository contains automated tests for https://magento.softwaretestingboard.com/ using Playwright, a modern end-to-end testing framework.
 
-Prerequisites
+# Prerequisites
 Before you begin, ensure you have the following installed:
 
 - Node.js (v16 or higher)
 - npm (v8 or higher) or yarn
 - Git
 
-Installation
+# Installation
 Clone the repository:
 
 bash
@@ -19,9 +19,11 @@ Install dependencies:
 
 - bash
 - npm install
-# or
+or
 - yarn install
-Install Playwright browsers:
+
+
+# Install Playwright browsers:
 
 bash
 - npx playwright install
