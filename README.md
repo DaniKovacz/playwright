@@ -29,7 +29,11 @@ yarn install
 
 bash
 ```
-npx playwright install
+npm init playwright@latest
+```
+or
+```
+yarn create playwright
 ```
 
 # Running Tests
