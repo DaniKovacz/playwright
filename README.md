@@ -1,81 +1,90 @@
-QA Automation Repository with Playwright
-This repository contains automated tests for https://magento.softwaretestingboard.com/ using Playwright, a modern end-to-end testing framework.
+# Magento Demo Site Automated Tests
 
-# Prerequisites
-Before you begin, ensure you have the following installed:
+This repository contains automated tests for the Magento demo site (https://magento.softwaretestingboard.com) using Playwright and JavaScript.
 
-- Node.js (v16 or higher)
-- npm (v8 or higher) or yarn
-- Git
+## Test Coverage
 
-# Installation
-Clone the repository:
+The test suite covers the following areas of the website:
 
-bash:
+1. **Home Page** - Tests for navigation, search, and featured products
+2. **Product Listing** - Tests for product grid, sorting, and filtering
+3. **Product Detail** - Tests for product information, options selection, and add to cart
+4. **Shopping Cart** - Tests for cart functionality, quantity updates, and price calculations
+5. **Checkout Process** - Tests for guest checkout flow and shipping/payment steps
+6. **Customer Account** - Tests for account creation, login, and password reset
+7. **Search Functionality** - Tests for search results and sorting
+8. **Orders and Returns** - Tests for order lookup functionality
+
+## Project Structure
+
 ```
-git clone https://github.com/DaniKovacz/playwright.git
+├── helpers/
+│   └── page-objects/       # Page Object Models
+├── tests/                  # Test files
+├── playwright.config.js    # Playwright configuration
+└── package.json           # Project dependencies
 ```
 
-Install dependencies:
-``` bash
+## Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+## Installation
+
+1. Clone this repository
+2. Install dependencies:
+
+```bash
 npm install
-
-```
-or
-```
-yarn install
-```
-# Install Playwright and its browsers:
-
-bash
-```
-npm init playwright@latest
-```
-or
-```
-yarn create playwright
 ```
 
-# Running Tests
-Run all tests
+## Running Tests
 
-bash:
-```
-npx playwright test --reporter=list
-```
-```
-yarn playwright test --reporter=list
+Run all tests:
+
+```bash
+npx playwright test
 ```
 
-Run tests in headed mode
+Run a specific test file:
 
-bash: 
+```bash
+npx playwright test tests/home-page.spec.js
 ```
+
+Run tests in UI mode:
+
+```bash
+npx playwright test --ui
+```
+
+Run tests in headed mode (with browser visible):
+
+```bash
 npx playwright test --headed
 ```
 
-Run specific test file
+## Test Reports
 
-bash:
-```
-npx playwright test tests/example.spec.ts
-```
+After running tests, you can view the HTML report:
 
-Run tests for specific browser
-
-bash: 
-```
-npx playwright test --project=chromium 
-```
-```
-npx playwright test --project=firefox
-```
-```
-npx playwright test --project=webkit
-```
-Generate test report
-
-bash:
-```
+```bash
 npx playwright show-report
 ```
+
+## Page Object Model
+
+The tests use the Page Object Model (POM) design pattern to encapsulate page elements and actions, making the code more maintainable and readable.
+
+Each page of the website has its own page object class in the `helpers/page-objects/` directory.
+
+## Notes
+
+- These tests are designed for the Magento demo site and may need adjustments for other Magento installations.
+- The tests avoid completing actual orders to prevent creating real orders in the system.
+- Some tests that require authentication may be skipped if valid credentials are not provided.
+
+## License
+
+MIT
